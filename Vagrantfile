@@ -10,4 +10,8 @@ Vagrant.configure(2) do |config|
 
   #konfigurasi provisioning
   config.vm.provision "shell", path: "install.sh"
+
+  #konfigurasi network
+  #port forwarding
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 end
